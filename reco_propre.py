@@ -62,8 +62,6 @@ def detection_color(frame):
     color = "Undefined"
     if hue_value < 5:
         color = "RED"
-    elif hue_value < 22:
-        color = "ORANGE"
     elif hue_value < 33:
         color = "YELLOW"
     elif hue_value < 78:
@@ -73,7 +71,7 @@ def detection_color(frame):
     elif hue_value < 170:
         color = "VIOLET"
     else:
-        color = "RED"
+        color = "AUTRE"
 
     cv2.putText(frame, "Detection de couleur",(int(width / 2) - 200, 100), 0, 1, (250, 0, 0), 5)
     cv2.circle(frame, (cx, cy), 5, (0, 250, 0), 3)
